@@ -8,7 +8,7 @@
 
 \usage{
 pamr.predict(fit, newx, threshold,
-             type = c("class", "posterior", "centroid", "nonzero"),
+             type = c("class", "posterior", "centroid", "nonzero", "score"),
              prior = fit$prior, threshold.scale = fit$threshold.scale)
 }
 
@@ -18,8 +18,8 @@ pamr.predict(fit, newx, threshold,
 \item{newx}{Matrix of features at which predictions are to be made}
   \item{threshold}{The desired threshold value}
   \item{type}{Type of prediction desired: class predictions, posterior
-    probabilities, (unshrunken) class centroids, vector of  genes
-    surviving the threshold}
+    probabilities, (unshrunken) class centroids, vector of genes
+    surviving the threshold, results of the discriminate function}
   \item{prior}{Prior probabilities for each class. Default is that
     specified in "fit"}
   \item{threshold.scale}{Additional scaling factors to be applied

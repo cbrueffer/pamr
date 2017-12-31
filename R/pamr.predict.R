@@ -1,4 +1,4 @@
-pamr.predict <-  function(fit, newx, threshold, type = c("class", "posterior", "centroid", "nonzero"), 
+pamr.predict <-  function(fit, newx, threshold, type = c("class", "posterior", "centroid", "nonzero", "score"),
                           prior = fit$prior,  threshold.scale = fit$
                           threshold.scale) {
   norm.cen <- fit$norm.cen
@@ -37,6 +37,8 @@ pamr.predict <-  function(fit, newx, threshold, type = c("class", "posterior", "
                                                 )) > 0
            seq(nz)[nz]
          }
+	 ,
+	 score = dd
          )
 }
 
